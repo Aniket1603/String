@@ -1,0 +1,17 @@
+import java.util.*;
+public class StringDataStructure {
+    public static void main(String[] args) {
+           Scanner scan = new Scanner(System.in);
+           System.out.println("enter your name");
+        String st1 = scan.nextLine();
+        String st2 = scan.nextLine();
+        System.out.println(st1.concat(st2));  // concat method
+        System.out.println(st1.compareTo(st2)); 
+        System.out.println(st1.equals(st2));
+        System.out.println(st1.substring(2,5));
+        System.out.println(st1.replace("chourasiya", "sharma"));
+        System.out.println(st1.replace('a', 'p'));
+     
+    
+}
+}

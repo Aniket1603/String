@@ -1,0 +1,14 @@
+import java.util.*;
+public class StringBuilders {
+    public static void main(String[] args) {
+        Scanner scan  = new Scanner(System.in);
+   StringBuilder sb = new StringBuilder("Aniket chourasiya");
+       sb.setCharAt(4,'p');
+        System.out.println(sb);
+        sb.insert(4,'a');
+        System.out.println(sb);
+        sb.delete(4,5);
+            System.out.println(sb);
+        
+}
+}

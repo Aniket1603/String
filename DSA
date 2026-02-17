@@ -1,0 +1,83 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter the first string");
+        String s1 = scan.nextLine();
+        
+        // System.out.println("enter the second string");
+        // String s2 = scan.nextLine();
+        
+        //for Copy the String
+        // String c = copyString(s);
+        //  System.out.println("Copy string" + c);
+        
+        
+        // for Concat the string
+        // String c = concatString(s1,s2);
+        // System.out.println("Concat string" +" "+ c);
+        
+        
+         //for the Length of String
+        // int length = lengthOfString(s1);
+        // System.out.println("Length of STring is" +" "+ length);
+        
+        
+        //for the longest String
+        String longest  = longestWord(s1);
+        System.out.println("Longest word in String is " +" "+ longest);
+        
+    }
+    public static String  copyString(String s)
+    {
+        String copy = "";
+        for(int i=0;i<s.length();i++)
+        {
+            copy += s.charAt(i);
+        }
+        return copy;
+    }
+    public static String concatString(String s1 , String s2)
+    {
+        
+        for(int i=0;i<s2.length();i++)
+        {
+            s1 += s2.charAt(i);
+        }
+        return s1;
+        
+    }
+    public static int lengthOfString(String s)
+    {
+        int length1 =0;
+        char ch[] = s.toCharArray();
+        for(int i=0;i<ch.length;i++)
+        {
+            length1++;
+        }
+        return length1;
+    }
+    public static String longestWord(String s)
+    {
+        String longest="";
+        int length =0;
+        String s1 = "";
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i) !=' ')
+            {
+                s1 += s.charAt(i);
+            }else{
+                if(s1.length() > length)
+                {
+                    longest =s1;
+                    
+                }
+                s1="";
+            }
+        }
+        return longest;
+    }
+    
+}

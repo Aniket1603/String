@@ -1,0 +1,9 @@
+public static boolean rotationOfString(String s1 ,String s2)
+    {
+    String s = s1 +s1;
+    if(s.contains(s2))
+    {
+        return true;
+    }
+    return false;
+    }

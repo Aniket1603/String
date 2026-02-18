@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the String");
+        String s = scan.nextLine();
+        subSquence(s,"",0);
+        
+    }
+    
+    public static void subSquence(String s , String ans ,int i)
+    {
+        if(i == s.length())
+        {
+            System.out.println(ans);
+            return;
+        }
+        subSquence(s,ans+s.charAt(i),i+1);
+        subSquence(s,ans,i+1);
+    }
+}

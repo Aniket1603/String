@@ -1,0 +1,18 @@
+ public static String FWC(String s)
+    {
+        char[] ch = s.toCharArray();
+        
+        if(ch[0]>='a'&&ch[0]<='z')
+        {
+            ch[0] = (char)(ch[0]-32);
+        }
+        for(int i=1;i<ch.length;i++)
+        {
+            if(ch[i-1]==' ' && ch[i]>='a'&&ch[i]<='z')
+            {
+                ch[i] =(char)(ch[i]-32);
+            }
+        }
+       String s1 = new String(ch); 
+       return s1;
+    }

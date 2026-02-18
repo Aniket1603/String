@@ -1,0 +1,23 @@
+public static char SMFC(String s)
+{
+    int freq[] =  new int [26];
+    
+    for(int i=0;i<s.length();i++)
+    {
+        freq[s.charAt(i)-'a']++;
+    }
+     int first=0,second=0;
+    for(int i=0;i<26;i++)
+    {
+        if(freq[i]>freq[first])
+        {
+            second =first;
+            first =i;
+        }else if(freq[i] > freq[second] && i != first)
+        {
+            second =i;
+        }
+    }
+    char ch = (char) (second+'a');
+    return ch;
+}

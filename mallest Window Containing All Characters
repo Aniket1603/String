@@ -1,0 +1,11 @@
+public static String containsAllCharacter(String s)
+    {
+        HashSet<Character> h = new HashSet<Character>();
+        for(int i=0;i<s.length();i++)
+        {
+            h.add(s.charAt(i));
+        }
+        
+        String s1 = h.toString();
+        return s1;
+    }

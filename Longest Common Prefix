@@ -1,0 +1,53 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner scan = new Scanner(System.in);
+        String arr[] = new String[3];
+        System.out.println("Enter the Vlaue of Array");
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i] = scan.nextLine();
+        }
+        
+        String s = longestPrefix(arr);
+        System.out.println("The Prefix is "+s);
+       
+    }
+    
+    public static String longestPrefix(String arr[])
+    {   String prefix="";
+        int minlength = arr[0].length();
+        
+        //Forthe smallest  String
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i].length()<minlength)
+            {
+                minlength =arr[i].length();
+            }
+        }
+
+for(int i=0;i<minlength;i++)
+{
+    char current = arr[0].charAt(i);
+    boolean b = true;
+    
+    for(int j=1;j<arr.length;j++)
+    {
+        if(current != arr[j].charAt(i))
+        {   b =false;
+            break;
+        }
+        }
+        if(b==true)
+        {
+            prefix += current;
+        }else{
+            break;
+        }
+    } return prefix;
+}
+
+    }
+    

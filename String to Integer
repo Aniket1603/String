@@ -1,0 +1,10 @@
+public static int stringTointeger(String s)
+    {
+        int number=0;
+        for(int i=0;i<s.length();i++)
+        {
+            number = number*10+(s.charAt(i)-'0');
+        }
+         return number;
+    }
+   

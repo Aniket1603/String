@@ -1,0 +1,29 @@
+ public static void LSWRC(String s) {
+
+    int max = 0;
+    int startIndex = 0;   // longest substring ka starting index
+
+    for (int i = 0; i < s.length(); i++) {
+
+        boolean visited[] = new boolean[256];
+        int len = 0;
+
+        for (int j = i; j < s.length(); j++) {
+
+            if (visited[s.charAt(j)])
+                break;
+
+            visited[s.charAt(j)] = true;
+            len++;
+
+            // Yahi pe update karenge
+            if (len > max) {
+                max = len;
+                startIndex = i;
+            }
+        }
+    }
+
+    System.out.println("Length: " + max);
+    System.out.println("Substring: " + s.substring(startIndex, startIndex + max));
+}
